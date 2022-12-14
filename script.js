@@ -3,7 +3,7 @@ const APIURL =
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
 
-// const movieEl = document.querySelector(".movie")
+const main = document.querySelector("main")
 
 const movieData = async () => {
     const res = await fetch(APIURL);
@@ -12,7 +12,7 @@ const movieData = async () => {
     // return resData;
 
     resData.results.forEach((data) => {
-        console.log(data);
+        // console.log(data);
 
         const movieEl = document.createElement("div");
         movieEl.classList.add("movie");
@@ -21,12 +21,26 @@ const movieData = async () => {
         <img src="${IMGPATH + data.poster_path}"/>
             <div class="movie_info">
                 <h3>${data.title}</h3>
-                <span>${data.vote_average}</span>
+                <span class=${rating(data.vote_average)}>${data.vote_average}</span>
             </div>
         `;
 
-        document.body.append(movieEl);
+        main.append(movieEl);
     });
 };
+
+
+const rating = (vote) => {
+    if (vote >= 8) {
+        return "blue"
+    }
+    else if (vote >= 5) {
+        return "red"
+    }
+    else {
+        return "yellow"
+    }
+}
+
 
 movieData();

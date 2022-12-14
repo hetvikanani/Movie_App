@@ -7,12 +7,18 @@ body {
   background-color: #22254b;
 }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .movie {
   background-color: #373b69;
   border-radius: 3px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   width: 300px;
-  margin: 2rem;
+  margin: 1rem;
+  overflow: hidden;
 }
 
 .movie img {
@@ -24,7 +30,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  align-items: center;
 }
 
 .movie_info h3 {
@@ -35,4 +42,17 @@ body {
     background-color: #22254b;
     border-radius: 3px;
     padding: 0.25rem 0.5rem;
+    font-weight: bold;
+}
+
+.movie_info span.blue{
+    color: rgb(35, 206, 183);
+}
+
+.movie_info span.red{
+    color: red;
+}
+
+.movie_info span.yellow{
+    color: yellow;
 }
