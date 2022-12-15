@@ -108,3 +108,25 @@ main {
 .movie:hover .overview{
   transform: translateY(0%);
 }
+
+.previosBtn{
+  display: none;
+}
+
+.iconBtn{
+  position: absolute;
+  right: 0;
+}
+
+i{
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 0.25rem;
+  margin: 0.25rem;
+  width: 30px;
+  height: 30px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  color: #373b69;
+}
