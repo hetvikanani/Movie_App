@@ -57,9 +57,12 @@ const showMovies = (resData) => {
 }
 
 const movieData = async (URL) => {
-    const res = await fetch(URL);
-    const resData = await res.json();
-    showMovies(resData)
+    // const res = await fetch(URL);
+    // const resData = await res.json();
+
+    const { data } = await axios.get(URL);
+
+    showMovies(data)
 };
 
 
